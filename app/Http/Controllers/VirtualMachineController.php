@@ -12,7 +12,7 @@ class VirtualMachineController extends Controller
      */
     public function index()
     {
-        return VirtualMachine::paginate(10);
+        return view('/virtual_machine/index');
     }
 
     /**
