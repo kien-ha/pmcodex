@@ -14,11 +14,11 @@ return new class extends Migration
         Schema::create('virtual_machines', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            $table->unsignedInteger("vmid")->unique();
-            $table->uuid("vmgenid")->unique();
-            $table->string("name");
-            $table->unsignedSmallInteger("cores");
-            $table->unsignedSmallInteger("ram");
+            $table->unsignedInteger('vmid')->unique();
+            $table->uuid('vmgenid')->unique();
+            $table->string('name');
+            $table->unsignedSmallInteger('cores');
+            $table->unsignedSmallInteger('ram');
         });
     }
 
