@@ -36,6 +36,8 @@ class VirtualMachineTable extends DataTableComponent
                 ->sortable(),
             Column::make("RAM", "ram")
                 ->sortable(),
+            Column::make("IPv4", "Network.ipv4")
+                ->sortable(),
         ];
     }
 }
