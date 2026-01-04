@@ -39,7 +39,8 @@ class VirtualMachineTable extends DataTableComponent
             Column::make("IPv4")
                 ->label(
                     fn($row) => $row->networks_ipv4 // This calls your Accessor
-                ),
+                )
+                ->html(),
         ];
     }
 }

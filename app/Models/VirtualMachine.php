@@ -16,7 +16,7 @@ class VirtualMachine extends Model
     protected function networksIpv4(): Attribute
     {
         return Attribute::make(
-            get: fn () => $this->networks?->pluck('ipv4')->implode(', '),
+            get: fn () => $this->networks?->pluck('ipv4')->implode('<br>'),
         );
     }
 }
