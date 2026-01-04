@@ -36,8 +36,10 @@ class VirtualMachineTable extends DataTableComponent
                 ->sortable(),
             Column::make("RAM", "ram")
                 ->sortable(),
-            Column::make("IPv4", "Network.ipv4")
-                ->sortable(),
+            Column::make("IPv4")
+                ->label(
+                    fn($row) => $row->networks_ipv4 // This calls your Accessor
+                ),
         ];
     }
 }
